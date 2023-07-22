@@ -1,0 +1,206 @@
+/* Estilos Generales */
+
+:root {
+    --color-primero: #FC7300;
+    --color-segundo: #1F8A70;
+    --color-tercero: #00425A;
+    --color-cuarto: #181823;
+    --color-quinto: #EFF5F5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-weight: 300px;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-quinto);
+}
+
+#menu-hamburguesa {
+    display: none;
+    background-color: var(--color-tercero);
+    width: 100%;
+    text-align: center;
+  }
+
+#boton-hamburguesa {
+    background-color: var(--color-tercero);
+    color: var(--color-quinto);
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  
+main {
+    font-family: 'Belanosima', sans-serif;
+}
+
+header {
+    background-color: var(--color-tercero);
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    padding: 10px;
+}
+
+.bg-header {
+    background-image: url("img/titulo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--color-quinto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.bg-header h1 {
+    font-weight: 500px;
+}
+
+/* Estilos section */
+section,
+footer {
+    padding: 40px;
+}
+
+section>div {
+
+    display: flex;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Estilos cards */
+#card-section>div {
+    display: flex;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 20px;
+    width: 50%;
+    border: 1px solid var(--color-quinto);
+    box-shadow: 2px 2px 6px var(--color-quinto);
+    margin: 20px 10px;
+
+}
+
+.card>h3 {
+    color: var(--color-segundo);
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+
+/*footer*/
+footer {
+    background-color: var(--color-tercero);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+}
+
+footer>div {
+    width: 50%;
+}
+
+footer h4 {
+    color: var(--color-quinto);
+    margin-bottom: 20px;
+}
+
+footer ul {
+    line-height: 2.5;
+    color: var(--color-quinto);
+}
+
+/*** Responsive */
+
+/* Estilos del menú horizontal para pantallas grandes */
+@media (min-width: 768px) {
+    #boton-hamburguesa {
+      display: none;
+    }
+    #menu-hamburguesa {
+      display: block;
+      background-color: transparent;
+      max-height: initial;
+      overflow: initial;
+    }
+    #menu-hamburguesa ul {
+      display: flex;
+      justify-content: center;
+    }
+    #menu-hamburguesa ul li {
+      padding: 10px 20px;
+    }
+  }
+
+  @media (max-width: 768px){
+    /* Tablets */
+section {
+    padding: 0px;
+   }
+section>div{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+footer{
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+footer>div{
+    margin-bottom: 30px;
+}
+
+.card, .formulario, footer div{
+    width: 100%;
+    }
+
+.contacto{
+    text-align: center;
+}
+}
+
+@media (max-width: 320px){
+    /* Smartphones */
+.bg-header{
+    height: 600px;
+}
+}

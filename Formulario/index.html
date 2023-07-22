@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jorge Martínez">
+    <meta name="description" content="Escuela Primaria UntrefSchool">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Dejanos tu consulta</title>
+</head>
+<body>
+    <form action="https://mailthis.to/martinezj1975@gmail.com" method="POST">
+        <fieldset>
+          <h1>¡Dejanos tu consulta!</h1>
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" placeholder="*campo obligatorio" required>
+          <label for="apellido">Apellido:</label>
+          <input type="text" name="apellido" id="apellido" placeholder="*campo obligatorio" required>
+          <label for="mail">Correo electrónico:</label>
+          <input type="email" name="email" id="mail" placeholder="*campo obligatorio" required>
+          <label for="telefono">Telefono:</label>
+          <input type="tel" name="telefono" id="telefono" placeholder="*campo obligatorio" required>
+          
+          <label>Nivel al que se desea inscribir:</label>
+          <select name="job">
+              <option value="1-grado">1° Grado</option>"
+              <option value="2-grado">2° Grado</option>"
+              <option value="3-grado">3° Grado</option>"
+              <option value="4-grado">4° Grado</option>"
+              <option value="5-grado">5° Grado</option>
+              <option value="6-grado">6° Grado</option>
+              <option value="7-grado">7° Grado</option>
+          </select>
+          
+          <label>Horario al que se desea inscribir:</label>
+            <input type="radio" name="turno" value="mañana">
+            <label for="turno">Turno mañana</label><br>
+            <input type="radio" name="turno" value="tarde">
+            <label for="turno">Turno tarde</label>
+            <hr>
+            
+          <label for="consulta">¿En que podemos ayudarte?</label>
+          <textarea name="comentario" id="consulta"></textarea>
+
+        </fieldset>
+    
+        <button type="reset">LIMPIAR</button>
+        <button type="submit">ENVIAR</button>
+      </form>
+</body>
+</html>
