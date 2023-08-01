@@ -1,5 +1,4 @@
 /* Estilos Generales */
-
 :root {
     --color-primero: #FC7300;
     --color-segundo: #1F8A70;
@@ -8,70 +7,43 @@
     --color-quinto: #EFF5F5;
 }
 
+img {
+    max-width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-weight: 300px;
+.seccion-clara {
+    color: var(--color-cuarto);
+    background-color: var(--color-quinto);
 }
 
-img {
-    max-width: 100%;
-}
 
-li {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
+/* Barra de navegación*/
+.navbar {
+    padding: 2rem;
+    background-color: var(--color-tercero);
+    font-family: 'Poppins', sans-serif;
     color: var(--color-quinto);
 }
 
-#menu-hamburguesa {
-    display: none;
-    background-color: var(--color-tercero);
-    width: 100%;
-    text-align: center;
-  }
-
-#boton-hamburguesa {
-    background-color: var(--color-tercero);
-    color: var(--color-quinto);
-    font-size: 24px;
-    font-family: 'Poppins', sans-serif;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-
-  
-main {
-    font-family: 'Belanosima', sans-serif;
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
 }
 
-header {
-    background-color: var(--color-tercero);
-    font-family: 'Poppins', sans-serif;
-}
-
-nav {
-    padding: 20px 0px 20px 0px;
-    display: flex;
-    justify-content: space-around;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li a {
-    padding: 10px;
-}
-
+/* Header */
 .bg-header {
     background-image: url("img/titulo.jpg");
     background-repeat: no-repeat;
@@ -84,29 +56,18 @@ nav ul li a {
     height: 300px;
 }
 
-.bg-header h1 {
-    font-weight: 500px;
+header {
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Estilos section */
-section,
-footer {
-    padding: 40px;
-}
+/* Main */
 
-section>div {
-
-    display: flex;
-}
-
-h2 {
-    font-size: 2rem;
-    text-align: center;
-}
-
-/* Estilos cards */
 #card-section>div {
     display: flex;
+}
+
+.conocenos {
+    padding: 10px;
 }
 
 .card {
@@ -125,8 +86,7 @@ h2 {
     margin: 20px 0;
 }
 
-
-/*footer*/
+/* Footer */
 footer {
     background-color: var(--color-tercero);
     font-family: 'Poppins', sans-serif;
@@ -147,60 +107,11 @@ footer ul {
     color: var(--color-quinto);
 }
 
-/*** Responsive */
 
-/* Estilos del menú horizontal para pantallas grandes */
-@media (min-width: 768px) {
-    #boton-hamburguesa {
-      display: none;
+/* Diseño Responsivo*/
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        display: none;
     }
-    #menu-hamburguesa {
-      display: block;
-      background-color: transparent;
-      max-height: initial;
-      overflow: initial;
-    }
-    #menu-hamburguesa ul {
-      display: flex;
-      justify-content: center;
-    }
-    #menu-hamburguesa ul li {
-      padding: 10px 20px;
-    }
-  }
-
-  @media (max-width: 768px){
-    /* Tablets */
-section {
-    padding: 0px;
-   }
-section>div{
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
-
-footer{
-    flex-wrap: wrap;
-    flex-direction: column;
 }
 
-footer>div{
-    margin-bottom: 30px;
-}
-
-.card, .formulario, footer div{
-    width: 100%;
-    }
-
-.contacto{
-    text-align: center;
-}
-}
-
-@media (max-width: 320px){
-    /* Smartphones */
-.bg-header{
-    height: 600px;
-}
-}
