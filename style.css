@@ -9,6 +9,7 @@
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 section {
@@ -29,8 +30,7 @@ section {
     background-color: var(--color-quinto);
 }
 
-
-/* Barra de navegación*/
+/* Barra de navegación */
 .navbar {
     padding: 2rem;
     background-color: var(--color-tercero);
@@ -61,9 +61,17 @@ header {
 }
 
 /* Main */
-
-#card-section>div {
+main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-section > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .conocenos {
@@ -73,14 +81,14 @@ header {
 .card {
     border-radius: 20px;
     padding: 20px;
-    width: 50%;
+    width: 100%;
+    max-width: 300px;
     border: 1px solid var(--color-quinto);
     box-shadow: 2px 2px 6px var(--color-quinto);
     margin: 20px 10px;
-
 }
 
-.card>h3 {
+.card > h3 {
     color: var(--color-segundo);
     font-size: 1.5em;
     margin: 20px 0;
@@ -91,10 +99,17 @@ footer {
     background-color: var(--color-tercero);
     font-family: 'Poppins', sans-serif;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
-footer>div {
-    width: 50%;
+footer > div {
+    flex: 1;
+    max-width: 200px;
+    margin: 10px;
+    text-align: center;
 }
 
 footer h4 {
@@ -107,11 +122,31 @@ footer ul {
     color: var(--color-quinto);
 }
 
-
-/* Diseño Responsivo*/
+/* Diseño Responsivo */
 @media screen and (max-width: 768px) {
     .navbar-brand {
         display: none;
     }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: none;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer > div {
+        max-width: 100%;
+    }
 }
+
+
+
 
